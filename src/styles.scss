@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.cdk-overlay-pane {
+  max-width: unset !important;
+  position: unset !important;
+}
+
+.app-modal-info,
+.app-modal-error {
+  &__small {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    position: absolute !important;
+    bottom: 0px !important;
+  }
+  &__gt-small {
+    width: 500px !important;
+    max-width: 500px !important;
+  }
+  .mat-dialog-container {
+    padding: 16px !important;
+    overflow: hidden;
+  }
+}

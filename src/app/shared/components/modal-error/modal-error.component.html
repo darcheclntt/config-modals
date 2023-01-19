@@ -1,0 +1,9 @@
+<mat-dialog-content class="app-modal-error">
+  <div fxLayout="column" class="content">
+    <h2 class="content-title">{{ data.title }}</h2>
+    <span class="content-description">{{ data.errorMessage }}</span>
+    <div fxLayout="row" class="content-buttons" fxLayoutAlign="end">
+      <button class="content-buttons-btnCancel" (click)="onBtnCancelAction()">Cerrar</button>
+    </div>
+  </div>
+</mat-dialog-content>

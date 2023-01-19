@@ -1,0 +1,29 @@
+.app-main {
+  &-title {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  &-row {
+    .btn {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      padding: 10px 12px;
+      border-radius: 4px;
+      margin: 10px;
+      border-color: transparent;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    &-btn1 {
+      background-color: #0e578c;
+      color: white;
+    }
+    &-btn2 {
+      background-color: #ffba01;
+      color: black;
+    }
+    &-btn3 {
+      background-color: #0c413c;
+      color: white;
+    }
+  }
+}

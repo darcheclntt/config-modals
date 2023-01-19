@@ -1,0 +1,38 @@
+.app-modal-info {
+  .content {
+    &-title {
+      color: #0e578c;
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-family: "Roboto", sans-serif;
+    }
+    &-description {
+      font-size: 16px;
+      font-weight: 600;
+      padding: 10px 0px;
+      font-family: "Roboto", sans-serif;
+    }
+    &-buttons {
+      button {
+        padding: 10px 12px;
+        border-color: transparent;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: "Roboto", sans-serif;
+        cursor: pointer;
+      border-radius: 4px;
+
+      }
+      &-btnAcept {
+        margin-right: 20px;
+        color: white;
+        background-color: #0e578c;
+      }
+      &-btnCancel {
+        color: white;
+        background-color: rgb(124, 8, 8);
+      }
+    }
+  }
+}
