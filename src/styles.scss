@@ -23,3 +23,10 @@
     overflow: hidden;
   }
 }
+
+.mat-bottom-sheet-container-info {
+  &__gt-small {
+    min-width: 500px !important;
+    max-width: 500px !important;
+  }
+}

@@ -5,5 +5,10 @@
     <button class="btn app-main-row-btn1" (click)="onBtn1Press()">Modal 1</button>
     <button class="btn app-main-row-btn2" (click)="onBtn2Press()">Modal 2</button>
     <button class="btn app-main-row-btn3" (click)="onBtn3Press()">Bottom Sheet</button>
+    <app-bottom-sheet-info
+      [bottomSheetInfo]=bottomSheetInfo
+      [openSheetMenu]="openSheetMenuOptInfo"
+      (closeSheetMenuEmitter)="closeSheetMenuInfo($event)">
+    </app-bottom-sheet-info>
   </div>
 </div>

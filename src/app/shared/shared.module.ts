@@ -17,8 +17,15 @@ import { MatDialogModule } from '@angular/material/dialog';
     CommonModule,
     FlexLayoutModule,
     MatBottomSheetModule,
-    MatDialogModule
+    MatDialogModule,
   ],
-  exports: [FlexLayoutModule, MatDialogModule, MatBottomSheetModule, ModalInfoComponent, ModalErrorComponent, BottomSheetInfoComponent],
+  exports: [
+    FlexLayoutModule,
+    MatDialogModule,
+    MatBottomSheetModule,
+    ModalInfoComponent,
+    ModalErrorComponent,
+    BottomSheetInfoComponent,
+  ],
 })
 export class SharedModule {}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalService } from '../../core/services/modal.service';
+import { BottomSheetInfo } from '../../core/models/bottomSheetInfo.model';
 
 @Component({
   selector: 'app-main',
@@ -8,7 +9,16 @@ import { ModalService } from '../../core/services/modal.service';
 })
 export class MainComponent implements OnInit {
   constructor(private _modalService: ModalService) {}
-
+  public openSheetMenuOptInfo: boolean = false;
+  public bottomSheetInfo: BottomSheetInfo = {
+    title: 'Bottom Sheet',
+    description:
+      'Automaticamente se cierra cuando pulsamos fuera o también se puede cerrar desde un botón que tenga asociada la acción de cerrar.',
+    btnText: 'Cerrar',
+    btnAction: () => {
+      this.openSheetMenuOptInfo = false;
+    },
+  };
   ngOnInit(): void {}
 
   onBtn1Press(): void {
@@ -18,21 +28,22 @@ export class MainComponent implements OnInit {
     this.openModalError();
   }
   onBtn3Press(): void {
-    console.log('btn 3');
+    this.openSheetMenuOptInfo = true;
   }
 
   public openModalInfo(): void {
     this._modalService
       .openModalInfo({
         title: 'Aviso',
-        description: 'Este modal esta hecho para ser cerrado unicamente pulsado el botón de cerrar',
+        description:
+          'Este modal esta hecho para ser cerrado unicamente pulsado el botón de aceptar o cerrar',
         btnAcceptAction: () => {
-          console.log('bye');
+          console.log('Has pulsado aceptar, también me cierro');
         },
       })
-      .subscribe((modal)=>{
+      .subscribe((modal) => {
         modal.afterClosed().subscribe((result) => {
-          console.log("Me subscribo al cierre");
+          console.log('Aquí se puden poner acciones asociadas al cierre');
         });
       });
   }
@@ -40,15 +51,19 @@ export class MainComponent implements OnInit {
     this._modalService
       .openModalError({
         title: 'Modal de error',
-        errorMessage: 'Este modal se puede cerrar pulsando en el botón de cerrar o en la parte exterior del modal',
+        errorMessage:
+          'Este modal se puede cerrar pulsando en el botón de cerrar o en la parte exterior del modal',
         btnAcceptAction: () => {
           console.log('Pulsado Aceptar');
         },
       })
-      .subscribe((modal)=>{
+      .subscribe((modal) => {
         modal.afterClosed().subscribe((result) => {
-          console.log("Me subscribo al cierre");
+          console.log('Aquí se puden poner acciones asociadas al cierre');
         });
       });
+  }
+  public closeSheetMenuInfo($event: any): void {
+    this.openSheetMenuOptInfo = !$event;
   }
 }

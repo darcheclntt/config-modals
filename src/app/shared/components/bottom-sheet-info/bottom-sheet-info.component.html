@@ -1,1 +1,11 @@
-<p>bottom-sheet-info works!</p>
+<ng-template let-bottomSheetRef="bottomSheetRef" #templateBottomSheetInfo>
+  <div fxLayout="column" class="app-bottom-sheet-info-content">
+    <h2 class="title">{{ bottomSheetInfo?.title }}</h2>
+    <span class="description">{{ bottomSheetInfo?.description }}</span>
+    <div class="buttons" fxLayout="row" fxLayoutAlign="end">
+      <button class="buttons-close" (click)="onButtonClick()">
+        {{ bottomSheetInfo?.btnText }}
+      </button>
+    </div>
+  </div>
+</ng-template>
