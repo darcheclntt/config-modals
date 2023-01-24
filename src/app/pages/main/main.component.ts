@@ -13,7 +13,7 @@ export class MainComponent implements OnInit {
   public bottomSheetInfo: BottomSheetInfo = {
     title: 'Bottom Sheet',
     description:
-      'Automaticamente se cierra cuando pulsamos fuera o también se puede cerrar desde un botón que tenga asociada la acción de cerrar.',
+      'Automáticamente se cierra cuando pulsamos fuera o también se puede cerrar desde un botón que tenga asociada la acción de cerrar.',
     btnText: 'Cerrar',
     btnAction: () => {
       this.openSheetMenuOptInfo = false;
@@ -36,14 +36,14 @@ export class MainComponent implements OnInit {
       .openModalInfo({
         title: 'Aviso',
         description:
-          'Este modal esta hecho para ser cerrado unicamente pulsado el botón de aceptar o cerrar',
+          'Este modal esta hecho para ser cerrado únicamente pulsado el botón de aceptar o cerrar',
         btnAcceptAction: () => {
           console.log('Has pulsado aceptar, también me cierro');
         },
       })
       .subscribe((modal) => {
         modal.afterClosed().subscribe((result) => {
-          console.log('Aquí se puden poner acciones asociadas al cierre');
+          console.log('Aquí se pueden poner acciones asociadas al cierre');
         });
       });
   }

@@ -12,8 +12,7 @@ export class ModalInfoComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<ModalInfoComponent>,
     @Inject(MAT_DIALOG_DATA) public data: ModalInfo,
-    private _mediaObserver: MediaObserver,
-
+    private _mediaObserver: MediaObserver
   ) {}
 
   ngOnInit(): void {

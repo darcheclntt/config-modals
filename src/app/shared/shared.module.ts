@@ -20,11 +20,6 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDialogModule,
   ],
   exports: [
-    FlexLayoutModule,
-    MatDialogModule,
-    MatBottomSheetModule,
-    ModalInfoComponent,
-    ModalErrorComponent,
     BottomSheetInfoComponent,
   ],
 })
